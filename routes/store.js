@@ -3,7 +3,6 @@ var router = express.Router();
 
 /* GET store page. */
 router.get('/', function(req, res, next) {
-	console.log(process.env.MESSAGE_URL);
   res.render('store', { title: 'Store', messageURL: process.env.MESSAGE_URL });
 });
 
