@@ -24,10 +24,9 @@ router.route('/message')
 				db.close();
 				res.status(400).send('Error, unable to store message: ' + txtMessage);
 			} else {
-				var docCount = db.collection.count();
 				db.close();
-				console.log(docCount + ' message stored ok in database: ' + txtMessage)
-				res.status(200).send('Message stored: "' + txtMessage + '"');
+				console.log('Message stored ok in database. New document: ' + txtMessage)
+				res.status(200).send('Message stored. : "' + txtMessage + '"');
 			}
 		});
 	});
